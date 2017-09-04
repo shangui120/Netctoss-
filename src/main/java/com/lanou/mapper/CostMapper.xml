@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lanou.mapper.CostMapper">
+    <resultMap id="CostMap" type="Cost">
+        <id column="cost_id" property="cost_id"/>
+        <result column="name" property="name"/>
+        <result column="base_duration" property="base_duration"/>
+        <result column="base_cost" property="base_cost"/>
+        <result column="unit_cost" property="unit_cost"/>
+        <result column="status" property="status"/>
+        <result column="descr" property="descr"/>
+        <result column="creatime" property="creatime"/>
+        <result column="startime" property="startime"/>
+        <result column="cost_type" property="cost_type"/>
+    </resultMap>
+
+
+</mapper>

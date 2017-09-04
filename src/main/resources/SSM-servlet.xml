@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--1-->
+    <!--配置springMVC-->
+
+    <!--mvc的注解驱动-->
+    <mvc:annotation-driven/>
+
+    <!--注解的包扫描-->
+    <!--将这个配置的包下的所有类,都相当于配置好了bean, 调用时使用注解-->
+    <!--每个类默认的Id是首字母小写的形式:例如, Student类的Id就是student-->
+    <context:component-scan base-package="com.lanou"/>
+
+    <!--默认的资源文件的处理方式-->
+    <!--类似js,css,img等资源文件,本身并不需要springMVC做处理-->
+    <mvc:default-servlet-handler/>
+
+    <!--试图解析器-->
+    <!--根据代码的逻辑处理,配置正确的jsp/html等文件路径-->
+    <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/NETCTOSS_html/"/>
+        <property name="suffix" value=".html"/>
+        <!--index.jsp-->
+    </bean>
+
+
+
+
+
+</beans>
